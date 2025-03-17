@@ -99,4 +99,9 @@ struct Vec3 {
 		double magnitude = sqrt(x * x + y * y + z * z);
 		return magnitude;
 	}
+
+	double dotVector(Vec3& vector)
+	{
+		return (this->x * vector.x + this->y + vector.y + this->z + vector.z);
+	}
 };
