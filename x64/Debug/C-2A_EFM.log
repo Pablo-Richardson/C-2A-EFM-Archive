@@ -1,23 +1,23 @@
 ﻿  test.cpp
-C:\Work\C#\C-2A_EFM\C-2A_EFM\constants.h(5,31): warning C4305: 'initializing': truncation from 'double' to 'const float'
-  (compiling source file '../../../C#/C-2A_EFM/C-2A_EFM/test.cpp')
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\constants.h(5,31): warning C4305: 'initializing': truncation from 'double' to 'const float'
+  (compiling source file 'test.cpp')
   
-C:\Work\C#\C-2A_EFM\C-2A_EFM\atmos.h(52,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '../../../C#/C-2A_EFM/C-2A_EFM/test.cpp')
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(52,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'test.cpp')
   
-C:\Work\C#\C-2A_EFM\C-2A_EFM\atmos.h(53,16): warning C4305: 'initializing': truncation from 'double' to 'float'
-  (compiling source file '../../../C#/C-2A_EFM/C-2A_EFM/test.cpp')
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(53,16): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'test.cpp')
   
-C:\Work\C#\C-2A_EFM\C-2A_EFM\atmos.h(59,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '../../../C#/C-2A_EFM/C-2A_EFM/test.cpp')
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(59,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'test.cpp')
   
-C:\Work\C#\C-2A_EFM\C-2A_EFM\atmos.h(60,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '../../../C#/C-2A_EFM/C-2A_EFM/test.cpp')
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(60,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'test.cpp')
   
-C:\Work\C#\C-2A_EFM\C-2A_EFM\atmos.h(62,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '../../../C#/C-2A_EFM/C-2A_EFM/test.cpp')
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(62,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'test.cpp')
   
-C:\Work\C#\C-2A_EFM\C-2A_EFM\atmos.h(67,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  (compiling source file '../../../C#/C-2A_EFM/C-2A_EFM/test.cpp')
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(67,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'test.cpp')
   
-  C-2A_EFM.vcxproj -> C:\Work\C#\C-2A_EFM\x64\Debug\C-2A_EFM.exe
+  C-2A_EFM.vcxproj -> C:\Users\pablo\Desktop\C-2A_EFM\x64\Debug\C-2A_EFM.exe

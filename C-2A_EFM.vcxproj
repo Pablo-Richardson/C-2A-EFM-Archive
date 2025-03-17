@@ -135,6 +135,7 @@
     <ClInclude Include="fuel.h" />
     <ClInclude Include="gear.h" />
     <ClInclude Include="hydraulics.h" />
+    <ClInclude Include="vec3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp" />

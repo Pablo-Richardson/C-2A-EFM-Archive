@@ -8,6 +8,7 @@
 #include "engines.h"
 #include "fuel.h"
 #include "hydraulics.h"
+#include "vec3.h"
 
 int main(int argc, char** argv)
 {
