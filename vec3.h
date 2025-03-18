@@ -1,6 +1,9 @@
 #pragma once
 #include <math.h>
 
+//Defines ED 3d vector (x = right positive, y = forward positive, z = up positive)
+//Allows for multiplicaiton of vectors, addition, subtraction, division, finding magnitude and the dot vectors.
+//Will have to use this for acceleration, speed and --- position (maybe?) ---
 struct Vec3 {
 	double x;
 	double y;

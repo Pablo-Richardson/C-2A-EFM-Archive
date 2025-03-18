@@ -35,6 +35,7 @@ namespace C2A
 		static constexpr float timeToExtend = 0.0f;
 		static constexpr float maxAngle = 0.0f;
 		static constexpr float Cya = 0.0f;
+		static constexpr float cx_flapl = 0.0f;
 
 		float getCurrentAngle() { return currentAngle; }
 		void setCurrentAngle(float &angle) { currentAngle = angle; }

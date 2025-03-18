@@ -8,5 +8,4 @@ namespace C2A
 	 float Cya[]; //Array of lift coefficients per AOA - Anything greater than X is a stall (so only needs to go up to like 15 indicies)
 	 float Cymax; //Declare later - stall AOA
 	 float kjx; //Roll rate constant acceleration
-	 float cx_flapl; //Flap Drag
 }
