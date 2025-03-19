@@ -9,6 +9,7 @@
 #include "fuel.h"
 #include "hydraulics.h"
 #include "vec3.h"
+using namespace C2A;
 
 int main(int argc, char** argv)
 {

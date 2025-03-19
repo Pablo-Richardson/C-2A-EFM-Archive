@@ -132,6 +132,7 @@
     <ClInclude Include="constants.h" />
     <ClInclude Include="controlSurfaces.h" />
     <ClInclude Include="engines.h" />
+    <ClInclude Include="forces.h" />
     <ClInclude Include="fuel.h" />
     <ClInclude Include="gear.h" />
     <ClInclude Include="hydraulics.h" />
