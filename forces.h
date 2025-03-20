@@ -22,6 +22,17 @@ namespace C2A
 	//Acceleration as vector
 	// Force/Mass
 	//Maybe per object? This could be better as it would allow for more specific functions all with the same name...
+
+	float getCya(float AOA)
+	{
+		//This is a placeholder until the actual calculations can be made
+		return 0.0f;
+	}
+	float getCxa(float AOA)
+	{
+		//This is a placeholder until the actual calculations can be made
+		return 0.0f;
+	}
 	Vec3 calculateLift(float Cya, float airDens, float speed, float wingSurface) 
 	{
 		float lift = 0.5 * Cya * airDens * pow(speed, 2) * wingSurface;

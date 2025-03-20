@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="aero.h" />
     <ClInclude Include="atmos.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="controlSurfaces.h" />

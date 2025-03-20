@@ -27,9 +27,6 @@
     <ClInclude Include="fuel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="aero.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="controlSurfaces.h">
       <Filter>Header Files</Filter>
     </ClInclude>
