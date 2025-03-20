@@ -24,14 +24,27 @@ namespace C2A
 	//Maybe per object? This could be better as it would allow for more specific functions all with the same name...
 	Vec3 calculateLift(float Cya, float airDens, float speed, float wingSurface) 
 	{
-		
+		float lift = 0.5 * Cya * airDens * pow(speed, 2) * wingSurface;
+		return Vec3(0, lift, 0);
 	}
 	Vec3 calculateWingDrag(float Xya, float airDens, float speed)
 	{
-
+		float drag = 0.5 * Xya * airDens * pow(speed, 2);
+		return Vec3(-drag, 0, 0);
 	}
+	//Placeholders until these calculations can be made (need center of mass infomration)
 	Vec3 calculateAileronMoment()
 	{
-
+		float momentX = 0.0f;
+		float momentY = 0.0f;
+		float momentZ = 0.0f;
+		return Vec3(momentX, momentY, momentZ);
+	}
+	Vec3 calculateElevatorMoment()
+	{
+		float momentX = 0.0f;
+		float momentY = 0.0f;
+		float momentZ = 0.0f;
+		return Vec3(momentX, momentY, momentZ);
 	}
 }

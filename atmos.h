@@ -23,19 +23,12 @@ namespace C2A
 			setTemperature(alt);
 			setAirDensity(pressure, temperature);
 		}
-		Atmos()
-		{
-			//Just for safety -> Not going to actually create objects using this
-			altitude = 0.0f;
-			airDensity = 0.0f;
-			pressure = 0.0f;
-			temperature = 0.0f;
-		}
+		Atmos() = default;
 
-		float getTemperature () { return temperature; }
-		float getPressure    () { return pressure   ; }
-		float getAirDensity  () { return airDensity ; }
-		float getAltitude    () { return altitude   ; }
+		float getTemperature () const { return temperature; }
+		float getPressure    () const { return pressure   ; }
+		float getAirDensity  () const { return airDensity ; }
+		float getAltitude    () const { return altitude   ; }
 
 		void setAltitude(float alt) { altitude = alt; }
 
