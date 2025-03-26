@@ -4,7 +4,6 @@
 #include <vector>
 #include "atmos.h"
 #include "constants.h"
-#include "aero.h"
 #include "engines.h"
 #include "fuel.h"
 #include "hydraulics.h"
