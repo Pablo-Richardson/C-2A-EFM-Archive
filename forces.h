@@ -3,77 +3,7 @@
 #include "vec3.h"
 #include "array"
 
-namespace C2A
-{
-	class liftingSurface
-	{
-		float damage;
-		float ID;
-		float area;
-		float Cy0;
-		float Cx0;
-		std::array<float, 15> Cya;
-		std::array<float, 15> Cxa;
 
-		liftingSurface(float damage, float ID, float area, float Cy0, float Cx0, std::array<float, 15> Cya, std::array<float, 15> Cxa)
-		{
-			this->damage = damage;
-			this->ID = ID;
-			this->area = area;
-			this->Cy0 = Cy0;
-			this->Cx0 = Cx0;
-			this->Cya = Cya;
-			this->Cxa = Cxa;
-		}
-
-		liftingSurface() = default;
-
-		float getDamage() const { return damage; }
-		float getID() const { return ID; }
-		float getArea() const { return area; }
-		float getCy0() const { return Cy0; }
-		float getCx0() const { return Cx0; }
-		float getCya(float AOA) const
-		{
-			if (AOA > 30)
-			{
-				return 0.0f;
-			}
-			else 
-			{
-				//Get AOA to become a number between 0-14 (So find out its ratio in that respect)
-				//Then find the two closest values in the array and interpolate between them
-				float ratio = AOA / 30;
-				int index = ratio * 14;
-				float lower = Cya[index];
-				float upper = Cya[index + 1];
-				float difference = upper - lower;
-				float interpolated = lower + (difference * ratio);
-				return interpolated;
-			}
-		}
-		float getCxa(float AOA) const
-		{
-			if (AOA > 30)
-			{
-				return 0.0f;
-			}
-			else
-			{
-				//Get AOA to become a number between 0-14 (So find out its ratio in that respect)
-				//Then find the two closest values in the array and interpolate between them
-				float ratio = AOA / 30;
-				int index = ratio * 14;
-				float lower = Cxa[index];
-				float upper = Cxa[index + 1];
-				float difference = upper - lower;
-				float interpolated = lower + (difference * ratio);
-				return interpolated;
-			}
-		}
-
-	};
-}
 
 /*
 //Lift - Wing, Aileron, Elevator

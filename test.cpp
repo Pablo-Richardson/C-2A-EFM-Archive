@@ -8,11 +8,14 @@
 #include "fuel.h"
 #include "hydraulics.h"
 #include "vec3.h"
+#include "liftSurface.h"
+#include "damage.h"
 using namespace C2A;
 
 int main(int argc, char** argv)
 {
-
+	LiftSurface wing;
+	std::cout << wing.getDamageLevel() << std::endl;
 }
 
 

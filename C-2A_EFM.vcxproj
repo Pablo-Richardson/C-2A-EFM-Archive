@@ -130,11 +130,13 @@
     <ClInclude Include="atmos.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="controlSurfaces.h" />
+    <ClInclude Include="damage.h" />
     <ClInclude Include="engines.h" />
     <ClInclude Include="forces.h" />
     <ClInclude Include="fuel.h" />
     <ClInclude Include="gear.h" />
     <ClInclude Include="hydraulics.h" />
+    <ClInclude Include="liftSurface.h" />
     <ClInclude Include="vec3.h" />
   </ItemGroup>
   <ItemGroup>
