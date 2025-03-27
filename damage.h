@@ -1,6 +1,9 @@
 #pragma once
 #include "vec3.h"
 
+//Default class for any object on the plane, defines an ID, position for the object and its damage level - which will effect its lift/drag
+//Disrupted airflow increases Cxa, decreases Cya and decreases area (although slight)
+
 namespace C2A
 {
 	class Damage

@@ -11,11 +11,19 @@ namespace C2A
 		float pressure;
 		float airDensity;
 		float altitude;
-	public:
+
 		static constexpr double mol = 0.02896;
 		static constexpr double gasConst = 287.05;
 		static constexpr double gasConstPress = 8.3143;
+		static constexpr float tempLapseRate = -0.0065;
+		static constexpr float seaLevelTemp = 288.15; 
+		static constexpr float seaLevelPressure = 101325;
+		static constexpr float feetToMeters = 0.3048;
+		static constexpr float fahrenheitToCelsius = 5.0 / 9.0;
+		static constexpr float celsiusToKelvin = 273.15;
 
+	public:
+		// Constructor to instantiate the atmosphere at a given altitude
 		Atmos(float alt)
 		{
 			setAltitude(alt);
@@ -25,14 +33,17 @@ namespace C2A
 		}
 		Atmos() = default;
 
-		float getTemperature () const { return temperature; }
-		float getPressure    () const { return pressure   ; }
-		float getAirDensity  () const { return airDensity ; }
-		float getAltitude    () const { return altitude   ; }
+		// Getters for atmospheric properties
+		inline float getTemperature() const { return temperature; }
+		inline float getPressure() const { return pressure; }
+		inline float getAirDensity() const { return airDensity; }
+		inline float getAltitude() const { return altitude; }
 
-		void setAltitude(float alt) { altitude = alt; }
+		// Setter for altitude
+		inline void setAltitude(float alt) { altitude = alt; }
 
-		void setAtmosphere(float temp, float press, float airDens, float alt)
+		// Setter for all atmospheric properties
+		inline void setAtmosphere(float temp, float press, float airDens, float alt)
 		{
 			temperature = temp;
 			pressure = press;
@@ -40,31 +51,30 @@ namespace C2A
 			altitude = alt;
 		}
 
-		void setPressure(float alt)
+		// Estimate and set pressure based on altitude using the barometric formula
+		inline void setPressure(float alt)
 		{
-			float bracket = 1 + ((-0.0065 / 288) * (alt - 0));
-			float power = (-1 * C2A::grav * mol) / (gasConstPress * -0.0065);
-			pressure = (101325 * pow(bracket, power));
+			float bracket = 1 + (tempLapseRate / seaLevelTemp) * alt;
+			float power = (-C2A::grav * mol) / (gasConstPress * tempLapseRate);
+			pressure = seaLevelPressure * std::pow(bracket, power);
 		}
 
-		void setTemperature(float alt)
+		// Estimate and set temperature based on altitude
+		inline void setTemperature(float alt)
 		{
-			float altFeet = alt * 3.281;
-			float temp = 59 - (0.00356 * altFeet);
-			temp = (temp - 32) * 5 / 9;
-			this->temperature = (temp + 273.15);
+			float altFeet = alt / feetToMeters;
+			float tempF = 59 - (0.00356 * altFeet);
+			float tempC = (tempF - 32) * fahrenheitToCelsius;
+			temperature = tempC + celsiusToKelvin;
 		}
 
-		void setAirDensity(float pressure, float temp)
+		// Estimate and set air density based on pressure and temperature
+		inline void setAirDensity(float pressure, float temp)
 		{
-			float airDensity = pressure / (gasConst * temp);
-			this->airDensity = airDensity;
+			airDensity = pressure / (gasConst * temp);
 		}
 	};
 }
-
-
-
 
 
 

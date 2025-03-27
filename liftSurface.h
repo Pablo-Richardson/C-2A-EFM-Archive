@@ -2,15 +2,19 @@
 #include "array"
 #include "vec3.h"
 #include "damage.h"
+
+//Default class for any surface that produces lift, will have calculations for lift and drag
+//Calculates lift and drag per lifting surface (maybe drag calculations should be handled in damage no?)
+
 namespace C2A
 {
 	class LiftSurface : public Damage 
 	{
 	private:
-		std::array<float, 14> Cya;
-		std::array<float, 14> Cxa;
+		std::array<float, 21> Cya; //21 indicies from AOA 0 to 20 - For lift coefficient
+		std::array<float, 21> Cxa; //Same but for drag coefficient
 	public:
-		LiftSurface(std::array<float, 14> Cya, std::array<float, 14> Cxa, float damage, float ID, Vec3 position) : Damage(damage, ID, position)
+		LiftSurface(std::array<float, 21> Cya, std::array<float, 21> Cxa, float damage, float ID, Vec3 position) : Damage(damage, ID, position)
 		{
 			this->Cya = Cya;
 			this->Cxa = Cxa;
@@ -18,22 +22,3 @@ namespace C2A
 		LiftSurface() : Cya({ 0 }), Cxa({ 0 }), Damage(0, 0, Vec3()) {}
 	};
 }
-
-/*
-private:
-		float damageLevel;
-		float ID;
-		Vec3 position;
-	public:
-		Damage(float damage, float ID, Vec3 position)
-		{
-			this->damageLevel = damage;
-			this->ID = ID;
-			this->position = position;
-		}
-		Damage() = default;
-		float getDamageLevel() const { return damageLevel; }
-		float getID() const { return ID; }
-		Vec3 getPosition() const { return position; }
-		float setDamageLevel(float damage) { damageLevel += damage; }
-*/

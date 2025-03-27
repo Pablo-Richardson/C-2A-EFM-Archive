@@ -12,11 +12,15 @@
 #include "damage.h"
 using namespace C2A;
 
+//File used to test all my functions and classes
+
+
 int main(int argc, char** argv)
 {
-	LiftSurface wing;
-	std::cout << wing.getDamageLevel() << std::endl;
+
 }
+
+
 
 
 
@@ -29,16 +33,16 @@ int main(int argc, char** argv)
 
 PRESSURE TEMPERATURE AND DENSITY TEST CODE WORKING 
 
-std::cout << "Altitude: " << atmosphere.getAltitude() << " Meters" << std::endl;
-	atmosphere.setPressure(atmosphere.getAltitude());
-	std::cout << "Pressure: " << atmosphere.getPressure() << " Pascals" << std::endl;
-	atmosphere.setTemperature(atmosphere.getAltitude());
-	std::cout << "Temperature: " << atmosphere.getTemperature() << " Kelvin" << std::endl;
-	atmosphere.setAirDensity(atmosphere.getPressure(), atmosphere.getTemperature());
-	std::cout << "Air Density: " << atmosphere.getAirDensity() << " kg/m^3" << std::endl;
-	system("cls");
+void testAtmosphere(float altitude)
+{
+    Atmos atmosphere(altitude);
 
-
+    std::cout << "Testing Atmosphere at Altitude: " << altitude << " meters" << std::endl;
+    std::cout << "Pressure: " << atmosphere.getPressure() << " Pascals" << std::endl;
+    std::cout << "Temperature: " << atmosphere.getTemperature() << " Kelvin" << std::endl;
+    std::cout << "Air Density: " << atmosphere.getAirDensity() << " kg/m^3" << std::endl;
+    std::cout << "----------------------------------------" << std::endl;
+}
 -----------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------
 */
