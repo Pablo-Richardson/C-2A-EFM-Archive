@@ -67,29 +67,17 @@ struct Vec3 {
 
 	Vec3 operator- (const Vec3& vector)
 	{
-		Vec3 result;
-		result.x = this->x - vector.x;
-		result.y = this->y - vector.y;
-		result.z = this->z - vector.z;
-		return result;
+		return Vec3(this->x - vector.x, this->y - vector.y, this->z - vector.z);
 	}
 
 	Vec3 operator+ (const Vec3 vector)
 	{
-		Vec3 result;
-		result.x = this->x + vector.x;
-		result.y = this->y + vector.y;
-		result.z = this->z + vector.z;
-		return result;
+		return Vec3(this->x + vector.x, this->y + vector.y, this->z + vector.z);
 	}
 
-	Vec3 operator/ (double p)
+	Vec3 operator/ (double p) const 
 	{
-		Vec3 result;
-		result.x = this->x / p;
-		result.y = this->y / p;
-		result.z = this->z / p;
-		return result;
+		return Vec3(x / p, y / p, z / p);
 	}
 
 	Vec3 sqrtVec()
@@ -97,14 +85,27 @@ struct Vec3 {
 		return Vec3(sqrt(x), sqrt(y), sqrt(z));
 	}
 
-	double magnitude()
+	double magnitude() const 
 	{
-		double magnitude = sqrt(x * x + y * y + z * z);
-		return magnitude;
+		return std::sqrt(x * x + y * y + z * z);
 	}
 
 	double dotVector(Vec3& vector)
 	{
-		return (this->x * vector.x + this->y + vector.y + this->z + vector.z);
+		return (this->x * vector.x + this->y * vector.y + this->z * vector.z);
+	}
+
+	Vec3 normalize() const {
+		double mag = magnitude();
+		if (mag == 0) return Vec3(0, 0, 0);
+		return *this / mag;
+	}
+
+	bool operator==(const Vec3& vector) const {
+		return x == vector.x && y == vector.y && z == vector.z;
+	}
+
+	bool operator!=(const Vec3& vector) const {
+		return !(*this == vector);
 	}
 };
