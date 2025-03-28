@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include "constants.h"
-#include <cmath>
 
 namespace C2A
 {

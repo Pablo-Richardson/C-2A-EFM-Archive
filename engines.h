@@ -1,21 +1,30 @@
 #pragma once
-#include <iostream>
+#include "damage.h"
+
+// Defines engine object as a subclass of object
+// Handles engine forces, spooilng, etc.
 
 namespace C2A
 {
-	class Engine
+	class Engine : public Damage
 	{
 	private:
-		int currentRPM; 
-		int damageLevel = 0;
+		int currentRPM;
 	public:
-		static constexpr int baseRMP = 0;
-		static constexpr float spoolTime = 0; //Time from Idle-100%
-		static constexpr float startTime = 0; //Time from 0-Idle
+		// Constants Needed for the engine
+		static constexpr int baseRPM = 0;
+		static constexpr int spoolRate = 0; // Rate at which it spools from Idle -> Max Power
+		static constexpr int startRate = 0; // Rate at which it spools from 0 -> Idle
 		static constexpr int idleRPM = 0;
 		static constexpr int maxRPM = 0;
 
-		int   getCurrentRPM  () { return currentRPM ; }
-		int   getDamageLevel () { return damageLevel; }
+		int getCurrentRPM() { return this->currentRPM; }
+
+		// Constructors - Both default and with passed values.
+		Engine(int currentRPM, float damage, float ID, Vec3 position) : Damage(damage, ID, position)
+		{
+			this->currentRPM = currentRPM;
+		}
+		Engine() : currentRPM(0), Damage(0, 0, Vec3()) {}
 	};
 }
