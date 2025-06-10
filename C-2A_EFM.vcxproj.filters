@@ -27,9 +27,6 @@
     <ClInclude Include="fuel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="controlSurfaces.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="hydraulics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -46,6 +43,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="damage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controlSurface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

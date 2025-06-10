@@ -1,18 +1,37 @@
 #pragma once
 #include "constants.h"
 #include "vec3.h"
-#include "array"
 
+// Combine forces from each source
+// Calculate total force on the aircraft
+// From this get acceleration in each direction (over mass)
 
+namespace C2A
+{
+	Vec3 combineDrag(Vec3 body, Vec3 Lwing, Vec3 Rwing, Vec3 tail, Vec3 rudd, Vec3 flaps, Vec3 gear)
+	{
+		return(body + Lwing + Rwing + tail + rudd + flaps + gear);
+	}
+
+	Vec3 combineLift(Vec3 Lwing, Vec3 Rwing, Vec3 tail, Vec3 flaps)
+	{
+		return(Lwing + Rwing + tail + flaps);
+	}
+
+	Vec3 calculateLift(float Cl, float dens, float speed, float CSA)
+	{
+		float lift = Cl * dens * speed * speed * 0.5 * CSA;
+		Vec3 totalLift(0, lift, 0);
+		return totalLift;
+	}
+}
 
 /*
 //Lift - Wing, Aileron, Elevator
-	//Drag - Body, Gear, Flaps
 	//Gravity - Weight (Fuel, Empty)
 	//Get in newtons
 	//Sum
 	//Handle Moments for rotation - Yikes - Elevator, Aileron
-	//Take lift as a center force
 	//Moment depends on trim and speed
 	//So we do the aelerons sepeartely
 	//Track Rotation
@@ -24,42 +43,4 @@
 	//Acceleration as vector
 	// Force/Mass
 	//Maybe per object? This could be better as it would allow for more specific functions all with the same name...
-
-	float getCya(float AOA)
-	{
-		//This is a placeholder until the actual calculations can be made
-		return 0.0f;
-	}
-	float getCxa(float AOA)
-	{
-		//This is a placeholder until the actual calculations can be made
-		return 0.0f;
-	}
-	Vec3 calculateLift(float Cya, float airDens, float speed, float wingSurface)
-	{
-		float lift = 0.5 * Cya * airDens * pow(speed, 2) * wingSurface;
-		return Vec3(0, lift, 0);
-	}
-	Vec3 calculateWingDrag(float Xya, float airDens, float speed)
-	{
-		float drag = 0.5 * Xya * airDens * pow(speed, 2);
-		return Vec3(-drag, 0, 0);
-	}
-	//Placeholders until these calculations can be made (need center of mass infomration)
-	Vec3 calculateAileronMoment()
-	{
-		float momentX = 0.0f;
-		float momentY = 0.0f;
-		float momentZ = 0.0f;
-		return Vec3(momentX, momentY, momentZ);
-	}
-	Vec3 calculateElevatorMoment()
-	{
-		float momentX = 0.0f;
-		float momentY = 0.0f;
-		float momentZ = 0.0f;
-		return Vec3(momentX, momentY, momentZ);
-	}
-
-
 */

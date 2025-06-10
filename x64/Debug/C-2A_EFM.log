@@ -2,28 +2,31 @@
 C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\constants.h(5,31): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(18,42): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(17,42): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(19,41): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(18,41): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(21,41): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(20,41): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(22,52): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(21,52): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(23,44): warning C4305: 'initializing': truncation from 'double' to 'const float'
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(22,44): warning C4305: 'initializing': truncation from 'double' to 'const float'
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(53,16): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(57,16): warning C4305: 'initializing': truncation from 'double' to 'float'
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(60,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(65,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'test.cpp')
   
-C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(67,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\atmos.h(73,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'test.cpp')
+  
+C:\Users\pablo\Desktop\C-2A_EFM\C-2A_EFM\forces.h(23,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'test.cpp')
   
   C-2A_EFM.vcxproj -> C:\Users\pablo\Desktop\C-2A_EFM\x64\Debug\C-2A_EFM.exe

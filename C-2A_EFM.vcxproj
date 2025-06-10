@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClInclude Include="atmos.h" />
     <ClInclude Include="constants.h" />
-    <ClInclude Include="controlSurfaces.h" />
+    <ClInclude Include="controlSurface.h" />
     <ClInclude Include="damage.h" />
     <ClInclude Include="engines.h" />
     <ClInclude Include="forces.h" />

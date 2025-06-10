@@ -6,6 +6,7 @@
 #include "constants.h"
 #include "engines.h"
 #include "fuel.h"
+#include "forces.h"
 #include "hydraulics.h"
 #include "vec3.h"
 #include "liftSurface.h"
@@ -17,7 +18,9 @@ using namespace C2A;
 
 int main(int argc, char** argv)
 {
+    Vec3 lift = calculateLift(0.5, 1.5, 100, 20);
 
+    std::cout << lift.y;
 }
 
 
@@ -43,6 +46,16 @@ void testAtmosphere(float altitude)
     std::cout << "Air Density: " << atmosphere.getAirDensity() << " kg/m^3" << std::endl;
     std::cout << "----------------------------------------" << std::endl;
 }
+
+
+
+LIFT VEC3 TEST COD WORKING
+
+Vec3 lift(0, 100, 0);
+    Vec3 liftCombined = combineLift(lift, lift, lift, lift);
+    std::cout << liftCombined.x << " " << liftCombined.y << " " << liftCombined.z << std::endl;
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------
 */
